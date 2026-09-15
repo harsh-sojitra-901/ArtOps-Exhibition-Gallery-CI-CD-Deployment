@@ -1,0 +1,42 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block content %}
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Thank You		
+							</h1>	
+							<p class="text-white link-nav"><a href="{% url 'index' %}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url 'contactus' %}"> Art Products</a></p>
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+			
+
+			<!-- Start upcoming-exibition Area -->
+			<section class="contact-page-area section-gap">
+				<div class="container">
+					<div class="row">
+					
+					<div class="title text-center">
+								
+							</div>
+						<div class="col-lg-8">
+                            <!-- /.card-header -->
+           
+            <h1>Thank You!!</h1>
+            <hr>
+            <p style="font-size: 20px;">Your enquiry number is <strong style="color: blue;">{{ enquirynumber }}</strong> we will contact you soon.</p>
+						</div>
+					</div>
+				</div>	
+			</section>
+           
+
+			{% endblock %}

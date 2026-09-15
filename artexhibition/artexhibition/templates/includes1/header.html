@@ -1,0 +1,38 @@
+{% load static %}
+<header id="header" id="home">
+    <div class="container header-top">
+        <div class="row">
+            <div class="col-6 top-head-left">
+                <ul>
+                    <li><a href="{% url 'login' %}">Admin</a></li>
+                    <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+                </ul>
+            </div>
+           		  			
+        </div>
+    </div>
+    <hr>
+  <div class="container">
+      <div class="row align-items-center justify-content-between d-flex">
+        <div id="logo">
+          <a href="{% url 'index' %}" style="font-weight: bolder;font-size: 25px;color: white;">Art Exhibition Management System</a>
+        </div>
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'aboutus' %}">About</a></li>
+            <li><a href="{% url 'art_product_list' %}">Art Product</a></li>
+           
+            <li><a href="{% url 'contactus' %}">Contact</a></li>
+            <li class="menu-has-children"><a href="">Art Type</a>
+              <ul>
+                {% for arttype in arttypes %}
+                <li><a href="{% url 'arttype_detail' id=arttype.id %}">{{ arttype.arttype }}</a></li>{% endfor %}
+            
+              </ul>
+            </li>			          
+          </ul>
+        </nav><!-- #nav-menu-container -->		    		
+      </div>
+  </div>
+</header><!-- #header -->
